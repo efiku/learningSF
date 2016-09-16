@@ -1,0 +1,19 @@
+{
+    "name": "efiku/learningSF",
+    "description": "Symfony3 with MicroKernel - learning",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Krzysztof Pazdur",
+            "email": "pazdurk@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require" : {
+          "symfony/symfony": "3.0"
+      },
+    "autoload": {
+        "psr-4": {"": "src/"}
+    }
+}
