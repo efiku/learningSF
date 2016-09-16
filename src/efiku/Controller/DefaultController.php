@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Kernel;
 
-class DefaultController extends Controller implements ContainerAwareInterface
+class DefaultController implements ContainerAwareInterface
 {
     use ContainerAwareTrait;
 
