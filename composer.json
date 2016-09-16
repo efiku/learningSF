@@ -15,5 +15,9 @@
       },
     "autoload": {
         "psr-4": {"": "src/"}
+    },
+    "config": {
+        "bin-dir": "bin",
+        "vendor-dir": "/home/vagrant/symfony/vendor"
     }
 }

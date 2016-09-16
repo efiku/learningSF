@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SIemanko</title>
-</head>
-<body>
+{%  extends 'base.html.twig' %}
+{% block body %}
 <h1>Symfony {{ version }}</h1>
 <h2>Lotto {{ lotto }}</h2>
 <h4>Vendor size: {{ vendor_size }} KB</h4>
-</body>
-</html>
+{%  endblock %}
