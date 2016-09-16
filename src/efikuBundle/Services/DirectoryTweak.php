@@ -6,7 +6,7 @@
  * Time: 10:09
  */
 
-namespace efiku\Services;
+namespace efikuBundle\Services;
 
 
 use FilesystemIterator;

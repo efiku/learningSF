@@ -1,8 +1,7 @@
 <?php
 
-namespace efiku\Controller;
+namespace efikuBundle\Controller;
 
-use efiku\Services\DirectoryTweak;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\HttpFoundation\Response;

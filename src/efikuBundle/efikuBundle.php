@@ -5,8 +5,10 @@
  * Date: 16.09.16
  * Time: 01:31
  */
-namespace efiku;
+namespace efikuBundle;
+
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+
 class efikuBundle extends Bundle
 {
 }
