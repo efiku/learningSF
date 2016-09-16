@@ -22,6 +22,7 @@ framework:
     fragments:       ~
     http_method_override: true
     assets: ~
+    profiler: ~
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
