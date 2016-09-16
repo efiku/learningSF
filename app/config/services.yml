@@ -1,4 +1,4 @@
 services:
     directory.tool:
             class:  efikuBundle\Services\DirectoryTweak
-            arguments: [ getDirectorySize ]
+            arguments: ~

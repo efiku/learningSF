@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 set_time_limit(0);
-require_once "/home/vagrant/symfony/vendor/autoload.php";
+require_once  __DIR__.'/../app/autoload.php';
 require_once __DIR__.'/../app/MicroKernel.php';
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;

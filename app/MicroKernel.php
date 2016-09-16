@@ -19,6 +19,7 @@ class MicroKernel extends Kernel
             new FrameworkBundle(),
             new TwigBundle(),
             new efikuBundle(),
+            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle()
         ];
 
         if ($this->isDevelopmentMode() ) {
@@ -50,7 +51,7 @@ class MicroKernel extends Kernel
     public function getCacheDir()
     {
         if ($this->isDevelopmentMode()) {
-            return '/dev/shm/symfony/cache/' .  $this->environment;
+            return '/tmp/symfony/cache/' .  $this->environment;
         }
 
         return parent::getCacheDir();
@@ -59,7 +60,7 @@ class MicroKernel extends Kernel
     public function getLogDir()
     {
         if ($this->isDevelopmentMode()) {
-            return '/dev/shm/symfony/logs';
+            return '/tmp/symfony/logs';
         }
 
         return parent::getLogDir();

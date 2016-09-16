@@ -2,6 +2,7 @@
 
 namespace efikuBundle\Controller;
 
+use efikuBundle\Entity\Items;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,14 +14,20 @@ class DefaultController implements ContainerAwareInterface
 
     public function indexAction()
     {
-        $lottoNumbers = range(1, 9);
-        $vendorSize = $this->container->get("directory.tool")->getDirectorySize("/home/vagrant/symfony/vendor");
+        $vendorSize = $this->container->get("directory.tool")
+            ->getDirectorySize("/home/vagrant/symfony/vendor/");
+
+        $itemsCollection = $this->getEntityManager("efikuBundle:Items")->findAll();
 
         return $this->container->get("templating")->renderResponse('index.html.twig', [
             'version' => Kernel::VERSION,
-            'lotto' => join(" ", $lottoNumbers),
-            'vendor_size' => $vendorSize
+            'vendor_size' => $vendorSize,
+            'items' => $itemsCollection
         ], new Response());
     }
 
+    private function getEntityManager($entityRepository){
+        return $this->container->get("doctrine.orm.entity_manager")
+            ->getRepository($entityRepository);
+    }
 }
