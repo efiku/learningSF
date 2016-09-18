@@ -4,3 +4,5 @@ app/cache/*
 app/logs/*
 web/bundles/*
 var/*
+bin/do*
+composer.lock

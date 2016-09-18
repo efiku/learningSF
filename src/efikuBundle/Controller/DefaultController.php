@@ -15,7 +15,7 @@ class DefaultController implements ContainerAwareInterface
     public function indexAction()
     {
         $vendorSize = $this->container->get("directory.tool")
-            ->getDirectorySize("/home/vagrant/symfony/vendor/");
+            ->getDirectorySize(__DIR__."/../../../vendor/");
 
         $itemsCollection = $this->getEntityManager("efikuBundle:Items")->findAll();
 

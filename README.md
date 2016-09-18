@@ -34,8 +34,10 @@ Teoretycznie można powiedzieć, że to Symfony z MikroKernelem.
 
 ### Konfiguracja
 
-1. Zerknij do pliku `composer.json` i zmień ścieżkę do vendor'a.
-2. Zmień ścieżkę w `app/autoload.php`. 
+Adres: http//localhost:8080/
 
-Obecny zabieg przeniesienia `vendor` do innej lokalizacji niż sharing NFS w vagrancie sprawił, że 
-ogromne opóźnienia zniknęły.
+Zrób po prostu ...
+
+```sh
+$ docker-compose up -d
+```
